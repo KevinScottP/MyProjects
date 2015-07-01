@@ -1,0 +1,193 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>Bizuno - WooCommerce Interface v1.0</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice 4.0.1  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGEDBY" CONTENT="David Premo">
+	<META NAME="CHANGED" CONTENT="20131218;14324485">
+	<META NAME="CHANGEDBY" CONTENT="David Premo">
+	<META NAME="CHANGEDBY" CONTENT="David Premo">
+	<STYLE TYPE="text/css">
+	<!--
+		H2.cjk { font-family: "SimSun" }
+		H2.ctl { font-family: "Mangal" }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="en-US" DIR="LTR">
+<H1><FONT FACE="Arial, sans-serif"><FONT SIZE=4 STYLE="font-size: 16pt">Bizuno
+- WooCommerce Interface Module - Release: 1.0</FONT></FONT></H1>
+<P><FONT FACE="Arial, sans-serif"><FONT SIZE=2>Created
+2015-04-17<BR>Last Update 2015-04-17<BR>Tested with Bizuno
+Release 1.0 and WooCommerce Release 1.5.6<BR>Developed by PhreeSoft,
+LLC. (www.PhreeSoft.com)</FONT></FONT></P>
+<P><FONT FACE="Arial, sans-serif"><FONT SIZE=2>Requirements:</FONT></FONT></P>
+<UL>
+	<LI><P>PhreeBooks R3.6 RC3 or greater</P>
+	<LI><P>Bizuno 1.0 or greater</P>
+	<LI><P>WooCommerce 1.5.6 or greater</P>
+</UL>
+<P><FONT FACE="Arial, sans-serif"><FONT SIZE=2>NOTE: The PHP cURL
+functions are required at both sides for the XML transactions to work
+properly.</FONT></FONT></P>
+<P><FONT FACE="Arial, sans-serif"><FONT SIZE=2>NOTE: Translation for
+English is included. </FONT></FONT>
+</P>
+<P><FONT FACE="Arial, sans-serif"><FONT SIZE=2>For questions,
+comments, and suggestions, please send email requests to
+biznerds@phreesoft.com.</FONT></FONT></P>
+<H1><FONT FACE="Arial, sans-serif"><FONT SIZE=4 STYLE="font-size: 16pt">New
+Installation - Bizuno Side</FONT></FONT></H1>
+<OL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">Go to My Business->Settings, From there go to the Interfaces tab and click install WooCommerce.</FONT>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">Go to My Business->Roles, Create
+	a new user (and password) and set all permissions to None except the
+	WooCommerce Interface (set to Full).<BR>This user name will be used by
+	WooCommerce to insert data into PhreeBooks/Bizuno. </FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">Log
+	out and back in to reload the security settings. </FONT>
+	</P>
+</OL>
+<H1><FONT FACE="Arial, sans-serif"><FONT SIZE=4 STYLE="font-size: 16pt">SETUP
+- Bizuno Side</FONT></FONT></H1>
+<OL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">Edit
+	the WooCommerce Properties and enter the information.<BR></FONT><STRONG><FONT FACE="Arial, sans-serif">WooCommerce
+	path:</FONT></STRONG> <FONT FACE="Arial, sans-serif">full url to
+	path where the upload file is located. It is mostly set be default,
+	the domain and path to the root admin folder needs to be
+	set.<BR></FONT><STRONG><FONT FACE="Arial, sans-serif">WooCommerce
+	username/password:</FONT></STRONG> <FONT FACE="Arial, sans-serif">An
+	WooCommerce admin user name and password to allow verification of the
+	interface when uploading data. This should be a unique user with
+	permissions only for the Bizuno/PhreeBooks interface.
+	<LI><P><FONT FACE="Arial, sans-serif">The install script will create
+	a new tab in your inventory maintenance page along with new
+	fields. These new fields are required to properly sync your current
+	products with the products in the WooCommerce store. Check Inventory -&gt;
+	Edit/Maintain, Open a product and check the new e-Store tab is
+	correctly showing the extra fields.</FONT>
+	</P>
+</OL>
+<H1><FONT FACE="Arial, sans-serif"><FONT SIZE=4 STYLE="font-size: 16pt">New
+Installation - WooCommerce Side</FONT></FONT></H1>
+<P><FONT FACE="Arial, sans-serif">In the WooCommerce_Bizuno_API/ folder are
+two folders, modules and admin (or whatever your admin folder has been
+renamed to). All files are PhreeBooks/Bizuno specific and will not overwrite
+core WooCommerce files during this step.</FONT></P>
+<OL>
+	<LI><P><FONT FACE="Arial, sans-serif">Admin Files: Copy the contents
+	of the admin folder to your WooCommerce admin folder (which should have
+	been renamed from the default installation name of &ldquo;admin&rdquo;
+	as per WooCommerce security recommendations).</FONT></P>
+</OL>
+<OL START=2>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">modules
+	Files: Copy the contents of the folder to the web site directory. </FONT>
+	</P>
+<H1><FONT FACE="Arial, sans-serif"><FONT SIZE=4 STYLE="font-size: 16pt">SETUP
+&ndash; WooCommerce Side</FONT></FONT></H1>
+<OL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">Go
+	to System &rarr; Users &rarr; User Groups and set permissions for
+	the groups to access the module. Set both Access and Modify
+	permissions for the Top Administrator. The title is
+	PhreeBooks/orders. </FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">Go
+	to Modules (Export)  &rarr; Bizuno Interface &rarr; Order Downloads and
+	click install.</FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">Click
+	edit and set the following:</FONT></P>
+</OL>
+<UL>
+	<UL>
+		<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">Enter
+		the Bizuno/PhreeBooks user name created for downloading orders. </FONT>
+		</P>
+		<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">Enter
+		the Bizuno/PhreeBooks password for the user. </FONT>
+		</P>
+		<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">For
+		the PhreeBooks URL enter:
+		http://path_to_PhreeBooks_root (or blank if bizuno) </FONT>
+		</P>
+		<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">If
+		using multi_store, enter a store id on Download Company. This can be used for
+		reporting activity through different sales channels. This field is
+		not required and may be left blank. </FONT>
+		</P>
+		<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">Enter
+		an optional prefix (e.g. OC) to use for creating the sales order
+		number. Note PhreeBooks/Bizuno does not allow for duplicate Sales Order
+		numbers. Adding a prefix will prevent conflict between downloaded
+		orders and orders generated within PhreeBooks/Bizuno. </FONT>
+		</P>
+		<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">Select
+		the status you want to set the order to after download. Typically I
+		use processing to differentiate from Pending when the order is
+		placed by the customer. </FONT>
+		</P>
+	</UL>
+	<LI><P><FONT FACE="Arial, sans-serif">Categories in PhreeBooks/Bizuno must
+	exist in WooCommerce and match identically. This is used to properly
+	determine where to place the item in the WooCommerce catalog. </FONT>
+	</P>
+</UL>
+<H1><FONT FACE="Arial, sans-serif"><FONT SIZE=4 STYLE="font-size: 16pt">USAGE
+- PhreeBooks/Bizuno Side</FONT></FONT></H1>
+<H2 CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=4>Product
+Related</FONT></FONT></H2>
+<OL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">Inventory
+	&rarr; Maintain<BR>Once the added fields have been entered into
+	Bizuno/PhreeBooks, the catalog checkbox is tested for each inventory item
+	and if selected, an upload icon will appear next to the inventory
+	item in the action area of the main inventory screen. Click the
+	button to upload the product. </FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">Tools
+	&rarr; WooCommerce Interface &rarr; Bulk Upload<BR>This action will
+	upload all inventory items that have the catalog checkbox set in the
+	inventory database. Images can be excluded to speed the upload
+	process.</FONT></P>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">Tools
+	&rarr; WooCommerce Interface &rarr; Synchronize Products<BR>This
+	feature will compare the selected inventory items from the
+	Bizuno/PhreeBooks inventory database file and verify they match with the
+	products listed on your WooCommerce e-store.<BR>Bizuno/PhreeBooks will not
+	delete the items on the WooCommerce store but will identify items that
+	are there but are not flagged to be there. They must be removed
+	manually from WooCommerce. </FONT>
+	</P>
+</OL>
+<H2 CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=4>Order
+Related</FONT></FONT></H2>
+<OL>
+	<LI><P><FONT FACE="Arial, sans-serif">Tools &rarr; WooCommerce
+	Interface &rarr; Confirm Shipments<BR>This feature will change the
+	status for all orders shipped on the selected date. Data is pulled
+	from the shipping_log table and will include the carrier and
+	tracking number.<BR>The order status will be changed to the value
+	set during the WooCommerce Administration setup. </FONT>
+	</P>
+</OL>
+<H1><FONT FACE="Arial, sans-serif"><FONT SIZE=4 STYLE="font-size: 16pt">USAGE
+- WooCommerce Side</FONT></FONT></H1>
+<H2 CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=4>Product
+Upload</FONT></FONT></H2>
+<P><FONT FACE="Arial, sans-serif">No action (data is received)</FONT></P>
+<H2 CLASS="western"><FONT FACE="Arial, sans-serif"><FONT SIZE=4>Order
+Download</FONT></FONT></H2>
+<OL>
+	<LI><P STYLE="margin-bottom: 0in"><FONT FACE="Arial, sans-serif">Individual
+	Order Download - Once an order has been placed, select Sales &rarr;
+	Orders from the admin screen.<BR>An [download] link will appear in
+	the action area next to each order to download the order.<BR>Click
+	the link to download the order to PhreeBooks/Bizuno. If successful, the
+	download link will no longer appear. Repeat for all other orders.</FONT></P>
+</OL>
+</BODY>
+</HTML>
